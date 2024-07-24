@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS changer</title>
+</head>
+<style>
+   .div {
+    height: 300px;
+    width: 300px;
+    border: 2px solid #333;
+    transition:all 0.4s ease;
+    margin:auto;
+    margin-top: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+
+    }
+   input {
+    align-items: center;
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    border: 2px solid #333;
+    font-size: 18px;
+    width: 25%;
+
+   } 
+   h1{
+    
+    text-align: center;
+    color: crimson;
+    
+   }
+</style>
+<body style="background-color: rgb(255, 253, 253);">
+    <h1>your colour guide</h1>
+    
+    <div class="div">
+        
+    </div>
+    <br>
+    <input class="input" type = "text" placeholder="enter text"/>
+
+</body>
+<script>
+    let box=document.querySelector("div")
+    input=document.querySelector("input")
+
+    input.addEventListener("input",()=>{
+        
+        box.style.backgroundColor=input.value
+        box.style.borderRadius=input.value
+        box.textContent=input.value
+        
+    })
+
+</script>
+</html>
